@@ -1,2 +1,11 @@
 <%- include('./partials/header.ejs') %>
+
+<% if (user) { %>
+  <h1>Welcome, <%= user.name %>!</h1>
+
+  <a href="#">My Cruise Albums</a>
+  <a href="#">Add a Cruise Album</a>
+<% } %>
+ 
+
 <%- include('./partials/footer.ejs') %>
