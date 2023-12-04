@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -9,4 +8,82 @@ a {
 
 .login img {
   height: 30px;
+}
+
+body {
+  background: #e8f8fd;
+  overflow: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes slide {
+   0% {transform: translate(-34vw);}
+  100% {transform: translate(100vw);}
+}
+
+@keyframes seasick {
+  0% {transform: translate(0, 0vmin);}
+  50% {transform: translate(0, -1vmin);}
+  100% {transform: translate(0, 0vmin);}
+}
+
+@keyframes seasick2 {
+  0% {transform: translate(0, 0vmin);}
+  50% {transform: translate(0, 1vmin);}
+  100% {transform: translate(0, 0vmin);}
+}
+
+.slide-in {
+  animation: slide 120s infinite;
+}
+
+.seasick {
+  animation: seasick 8s infinite;
+}
+
+.seasick2 {
+  animation: seasick2 8s infinite;
+}
+
+#boat-pic {
+  width: 35%;
+  min-width: 34%;
+  bottom: 8%;
+  position: absolute;
+  z-index: 2;
+}
+
+
+.waves {
+  right: 0;
+  width: 102%;
+  height: 15%;
+}
+
+#wave-1 {
+  position: absolute;
+  bottom: 2vmin;
+  z-index: 1;
+}
+
+#wave-2 {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
+
+@media (max-width: 1250px) {
+  .waves {
+    width: 100vw;
+    height: 10%;
+  }
+
+  #boat-pic {
+    width: 35%;
+  }
+  
 }
