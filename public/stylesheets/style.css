@@ -5,6 +5,7 @@ body {
 
 body {
   overflow: hidden;
+  text-align: center;
 }
 
 * {
@@ -221,5 +222,15 @@ nav>a {
     font-size: 3vmin;
   }
 
+  nav a {
+    font-size: 4vmin;
+  }
+
+  #logout {
+    position: static;
+    display: inline-block;
+    font-size: 4vmin;
+    padding: 2vmin 3vmin;
+  }
   
 }
