@@ -178,7 +178,7 @@ nav>a {
 }
 
 .fadein {
-  animation: fadein 8s;
+  animation: fadein 6s;
 }
 
 @keyframes fadein {
