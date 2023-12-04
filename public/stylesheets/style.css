@@ -1,17 +1,9 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.login img {
-  height: 30px;
+  font-family: 'Work Sans';
+  font-weight: 300;
 }
 
 body {
-  background: #e8f8fd;
   overflow: hidden;
 }
 
@@ -20,8 +12,16 @@ body {
   margin: 0;
 }
 
+#logo {
+  width: 35vmin;
+  margin: 3vmin auto;
+  display: block;
+}
+
+/* boat and waves styling */
 @keyframes slide {
    0% {transform: translate(-34vw);}
+   10% {transform: translate(0vw);}
   100% {transform: translate(100vw);}
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 .slide-in {
-  animation: slide 120s infinite;
+  animation: slide 150s infinite;
 }
 
 .seasick {
@@ -56,7 +56,6 @@ body {
   position: absolute;
   z-index: 2;
 }
-
 
 .waves {
   right: 0;
@@ -85,5 +84,133 @@ body {
   #boat-pic {
     width: 35%;
   }
+}
+
+/* index/login page styling - unauthed user */
+main, #signup-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#signup-box {
+  height: auto;
+  padding: 5vmin;
+  background: rgba(238, 235, 225, 0.546);
+  border-radius: 5vmin;
+  box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48)
+
+}
+
+.welcome > h1, #signup-box>h1 {
+  font-size: 5vmin;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.25vmin;
+}
+
+#signup p {
+  font-size: 2vmin;
+  margin: 1.5vmin 0;
+  width: 25vw;
+  line-height: 3.5vmin;
+  text-align: center;
+}
+
+#signup button {
+  margin: 1vmin;
+  font-family: inherit;
+  font-size: 2vmin;
+  padding: 1vmin 2vmin;
+  display: flex;
+  justify-content: center;
+  background: white;
+  border: 2px solid black;
+  align-items: center;
+  border-radius: 6vmin;
+}
+
+#signup button a {
+  text-decoration: none;
+  color: black;
+  margin-right: 1vmin;
+}
+
+#signup button img {
+  height: 30px;
+}
+
+/* for auth users main page */
+#logout {
+  text-decoration: none;
+  font-size: 1.5vmin;
+  letter-spacing: 0.5vmin;
+  padding: 1.5vmin 2.5vmin;
+  margin: 2vmin 4vmin;
+  background: black;
+  color: white;
+  border-radius: 4vmin;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+nav {
+  margin: 7vmin auto;
+}
+
+nav>a {
+  text-decoration: none;
+  letter-spacing: 0.5vmin;
+  padding: 2vmin 3vmin;
+  margin: 9vmin 4vmin;
+  border: 2px solid black;
+  border-radius: 4vmin;
+  color: black;
+}
+
+.button-hover:hover {
+  background: black;
+  color: white;
+  transition: 0.25s;
+}
+
+@media (max-width: 1250px) {
+  .welcome a {
+    display: block;
+    margin: 5%;
+    text-align: center;
+  }
+
+  .welcome > h2 {
+    max-width: 80vw;
+  }
+
+  .welcome {
+    height: 70vh;
+  }
+
+  #signup {
+    align-items: center;
+    padding: 0;
+  }
+
+  #signup p {
+    width: 80vw;
+    font-size: 4vmin;
+    line-height: 5vmin;
+  }
+
+  #logo {
+    width: 40%;
+  }
+
+  #signup button {
+    width: 50%;
+    font-size: 3vmin;
+  }
+
   
 }

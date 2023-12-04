@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-
-    <nav>
-      <% if (user) { %>
-        <a href="/logout">LOG OUT</a>
-      <% } else { %>
-        <a href="/auth/google" class="login">Log-In With Google&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-      <% } %>
-    </nav>
+	<head>
+		<title><%= title %></title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Vidaloka&family=Work+Sans:wght@100;300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+    <img id="logo" src="https://i.imgur.com/nQRX68u.png" alt="logo">
