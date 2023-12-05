@@ -9,11 +9,13 @@ passport.use(new GoogleStrategy(
     callbackURL: process.env.GOOGLE_CALLBACK
   },
   async function(accessToken, refreshToken, profile, cb) {
+    console.log(profile)
     try {
       let user = await User.findOne({ googleId: profile.id });
       if (user) return cb(null, user);
       user = await User.create({
         name: profile.displayName,
+        firstName: profile.name.givenName,
         googleId: profile.id,
         email: profile.emails[0].value,
         avatar: profile.photos[0].value
