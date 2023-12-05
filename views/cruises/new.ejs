@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+
+<h1>Add a New Cruise</h1>
+
+<form id="new-cruise-form" action="/cruises" method="POST">
+    <label>Cruise Title:</label>
+    <input type="text" name="title" placeholder="'Disney Cruise Eastern Caribbean 2023'" />
+
+    <label>Number of Days:</label>
+    <input type="number" name="numDays" placeholder="'7'">
+
+    <label>Cruise Line:</label>
+    <select name="cruiseLine">
+        <option value="Disney">Disney</option>
+        <option value="Princess">Princess</option>
+        <option value="Royal Caribbean">Royal Caribbean</option>
+        <option value="Carnival">Carnival</option>
+        <option value="Celebrity">Celebrity</option>
+    </select>
+    
+    <label>Cruise Boat:</label>
+    <input type="text" name="cruiseBoat" placeholder="'Disney Fantasy'">
+
+    <label>Embarkation Date:</label>
+    <input type="datetime-local" name="startDate">
+
+    <label>Disembarkation Date:</label>
+    <input type="datetime-local" name="endDate">
+
+    <label>Itinerary:</label>
+    <input type="text" name="itinerary" placeholder="'Eastern Caribbean'">
+
+    <input type="submit" value="Add Cruise">    
+</form>
+
+<%- include('../partials/footer') %>

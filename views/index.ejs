@@ -1,20 +1,21 @@
 <%- include('./partials/header.ejs') %>
 
 <% if (user) { %>
-  <a id="logout" href="/logout">LOG OUT</a>
+  <div id="logout-container"><a id="logout" href="/logout">LOG OUT</a></div>
+
   <main class="welcome fadein" id="user-home">
     <h1>Welcome, <%= user.name %>!</h1>
     <nav>
-      <a href="#" class="button-hover">ADD CRUISE ALBUM</a>
+      <a href="#" class="button-hover">ADD CRUISE</a>
       <a href="#" class="button-hover">MY PASSPORT</a>
-      <a href="#" class="button-hover">MY CRUISE ALBUMS</a>
+      <a href="#" class="button-hover">MY CRUISES</a>
     </nav>
   </main>
 <% } else { %>
   <main class="welcome" id="signup">
     <div id="signup-box">
       <h1>Ahoy There!</h1>
-      <p>Relive your cruise adventures with Captains Log! Document daily highlights, create albums, and watch your travel legacy unfold in a personalized passport, capturing the richness of maritime experiences.</p>
+      <p>Relive your cruise adventures with Captains Log! Create cruise logs, document daily highlights, and watch your travel legacy unfold in a personalized passport, capturing the richness of maritime experiences.</p>
       <button><a id="log-in" href="/auth/google" class="login">Sign-up / Log-In</a><img src="https://i.imgur.com/FHjYyi0.png"/></button>
     </div>
   </main>
