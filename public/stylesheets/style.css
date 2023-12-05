@@ -14,8 +14,39 @@ body {
 
 #logo {
   width: 35vmin;
-  margin: 3vmin auto;
-  display: block;
+}
+
+hr {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3vmin;
+}
+
+header>nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header>nav>a {
+  margin: 0 1.2vmin;
+  color: black;
+  letter-spacing: 0.25vmin;
+  text-decoration: none;
+}
+
+#logout {
+  text-decoration: none;
+  font-size: 1.5vmin;
+  letter-spacing: 0.5vmin;
+  padding: 1vmin 2vmin;
+  background: black;
+  color: white;
+  border-radius: 4vmin;
 }
 
 /* boat and waves styling */
@@ -104,7 +135,7 @@ main, #signup-box, #new-cruise-form {
 
 }
 
-.welcome > h1, #signup-box>h1 {
+.welcome>h1, #signup-box>h1 {
   font-size: 5vmin;
   font-weight: 400;
   text-transform: uppercase;
@@ -143,38 +174,8 @@ main, #signup-box, #new-cruise-form {
 }
 
 /* for auth users main page */
-#logout {
-  text-decoration: none;
-  font-size: 1.5vmin;
-  letter-spacing: 0.5vmin;
-  padding: 1.5vmin 2.5vmin;
-  margin: 2vmin 5vmin;
-  background: black;
-  color: white;
-  border-radius: 4vmin;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-nav {
+#user-home nav {
   margin: 7vmin auto;
-}
-
-nav>a {
-  text-decoration: none;
-  letter-spacing: 0.5vmin;
-  padding: 2vmin 3vmin;
-  margin: 9vmin 4vmin;
-  border: 2px solid black;
-  border-radius: 4vmin;
-  color: black;
-}
-
-.button-hover:hover {
-  background: black;
-  color: white;
-  transition: 0.25s;
 }
 
 .fadein {
@@ -193,12 +194,18 @@ nav>a {
     text-align: center;
   }
 
-  .welcome > h2 {
+  .welcome > h1 {
     max-width: 80vw;
   }
 
   .welcome {
-    height: 70vh;
+    height: 70v;
+  }
+
+  hr {
+    display: block;
+    width: 90vw;
+    margin: 4vmin 0;
   }
 
   #signup {
@@ -213,7 +220,8 @@ nav>a {
   }
 
   #logo {
-    width: 50%;
+    display: inline-block;
+    width: 75%;
   }
 
   #signup button {
@@ -221,18 +229,25 @@ nav>a {
     font-size: 3vmin;
   }
 
-  nav a {
-    font-size: 4vmin;
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  #logout-container {
-    text-align: center;
+  header>nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  header>nav>a {
+    margin: 1vmin;
+    font-size: 5vmin;
+  }
+  #logo {
+    width: auto;
   }
 
   #logout {
-    position: static;
-    display: inline-block;
     font-size: 4vmin;
-    padding: 2vmin 3vmin;
-  } 
+  }
 }

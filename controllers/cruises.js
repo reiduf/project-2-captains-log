@@ -2,7 +2,8 @@ const Cruise = require("../models/cruise");
 
 module.exports = {
   index,
-  new: newCruise
+  new: newCruise,
+  create
 };
 
 function newCruise(req, res) {
@@ -10,10 +11,31 @@ function newCruise(req, res) {
 }
 
 async function index(req, res) {
-  const cruises = await Cruise.find({ user: req.user._id });
+  const userCruises = await Cruise.find({ user: req.user._id });
 
   res.render('cruises/index', { 
     title: 'My Cruises',
-    cruises 
+    userCruises 
   })
+}
+
+async function create(req, res) {
+    
+  req.body.user = req.user._id;
+ 
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key];
+  }
+
+  try {
+    await Cruise.create(req.body)
+    const userCruises = await Cruise.find({ user: req.user._id });
+    res.render('cruises/index', { 
+      title: 'My Cruises',
+      userCruises
+    })
+  } catch(err) {
+    console.log(err)
+    res.render('cruises/new', { errorMsg: err.message })
+  }
 }

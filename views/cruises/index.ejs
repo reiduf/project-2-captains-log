@@ -3,10 +3,13 @@
 <h1>My Cruises</h1>
 
 <section id="user-cruise-gallery">
-  <% cruises.forEach(function(cruise, idx) { %>
+  <% userCruises.forEach(function(cruises, idx) { %>
     <div class="user-cruise-thumbnail" id="thumb-<%= idx %>">
       <p><%= cruises.title %></p>
-      <p><%= cruises.startDate %> - <%= cruises.endDate %></p>
+      <p>
+        <%= cruises.startDate.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) %> 
+        to 
+        <%= cruises.endDate.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) %></p>
       <p><%= cruises.logs.length %> Logs</p>
     </div>
   <% }); %>

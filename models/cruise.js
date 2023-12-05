@@ -28,13 +28,16 @@ const cruiseSchema = new Schema({
   cruiseLine: {
     type: String,
     default: 'Disney',
-    enum: ['Disney Cruise Line', 'Princess', 'Royal Caribbean', 'Carnival', 'Celebrity'],
+    enum: ['Disney', 'Princess', 'Royal Caribbean', 'Carnival', 'Celebrity'],
   },
   cruiseBoat: String,
   startDate: Date,
   endDate: Date,
   itinerary: String,
-  logs: [logSchema],
+  logs: {
+    type: [logSchema],
+    default: []
+  },
   notes: String,
   user: {
     type: Schema.Types.ObjectId,
