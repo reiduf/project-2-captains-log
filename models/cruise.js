@@ -20,7 +20,8 @@ const logSchema = new Schema({
 const cruiseSchema = new Schema({
   title: {
     type: String,
-    required: true
+    required: true,
+    maxLength: 30
   },
   numDays: {
     type: Number,

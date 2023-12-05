@@ -13,7 +13,8 @@
         <%= cruises.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> 
         to
         <%= cruises.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
-      <p><%= cruises.logs.length %> Logs</p>
+      <p><span>Itinerary: </span> <%= cruises.itinerary %></p>
+      <span id="logs"><%= cruises.logs.length %> Logs</span>
     </div>
   </article>
   <% }); %>
