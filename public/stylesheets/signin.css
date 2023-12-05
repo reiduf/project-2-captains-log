@@ -1,0 +1,150 @@
+body {
+  overflow: hidden;
+}
+
+/* index/login page styling - unauthed user */
+main, #signup-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#signup-box {
+  height: auto;
+  padding: 5vmin;
+  background: rgba(238, 235, 225, 0.546);
+  border-radius: 5vmin;
+  box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48)
+}
+
+#signup p {
+  font-size: 2vmin;
+  margin: 1.5vmin 0;
+  width: 25vw;
+  line-height: 3.5vmin;
+  text-align: center;
+}
+
+#signup button {
+  margin: 1vmin;
+  font-family: inherit;
+  font-size: 2vmin;
+  padding: 1vmin 2vmin;
+  display: flex;
+  justify-content: center;
+  background: white;
+  border: 2px solid black;
+  align-items: center;
+  border-radius: 6vmin;
+}
+
+#signup button a {
+  text-decoration: none;
+  color: black;
+  margin-right: 1vmin;
+}
+
+#signup button img {
+  height: 30px;
+}
+
+/* boat and waves styling */
+@keyframes slide {
+  0% {transform: translate(-34vw);}
+   10% {transform: translate(0vw);}
+  100% {transform: translate(100vw);}
+}
+
+@keyframes seasick {
+  0% {transform: translate(0, 0vmin);}
+  50% {transform: translate(0, -1vmin);}
+  100% {transform: translate(0, 0vmin);}
+}
+
+@keyframes seasick2 {
+  0% {transform: translate(0, 0vmin);}
+  50% {transform: translate(0, 1vmin);}
+  100% {transform: translate(0, 0vmin);}
+}
+
+.slide-in {
+  animation: slide 250s infinite;
+}
+
+.seasick {
+  animation: seasick 6s infinite;
+}
+
+.seasick2 {
+  animation: seasick2 6s infinite;
+}
+
+#boat-pic {
+  width: 35%;
+  min-width: 34%;
+  bottom: 8%;
+  position: absolute;
+  z-index: 2;
+}
+
+.waves {
+  right: 0;
+  width: 102%;
+  height: 15%;
+}
+
+#wave-1 {
+  position: absolute;
+  bottom: 2vmin;
+  z-index: 1;
+}
+
+#wave-2 {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+}
+
+/* media quieries */
+@media (max-width: 1250px) {
+  .waves {
+    width: 100vw;
+    height: 10%;
+  }
+
+  #boat-pic {
+    width: 35%;
+  }
+
+  .welcome a {
+    display: block;
+    margin: 5%;
+    text-align: center;
+  }
+
+  .welcome > h1 {
+    max-width: 80vw;
+  }
+
+  .welcome {
+    height: 70vh;
+  }
+
+  #signup {
+    align-items: center;
+    padding: 0;
+  }
+
+  #signup p {
+    width: 80vw;
+    font-size: 4vmin;
+    line-height: 5vmin;
+  }
+
+  #signup button {
+    width: 50%;
+    font-size: 3vmin;
+  }
+}

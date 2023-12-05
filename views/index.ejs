@@ -1,4 +1,7 @@
-<%- include('./partials/header.ejs') %>
+<%- include('./partials/header-pre-link') %>
+<link rel="stylesheet" href="/stylesheets/signin.css" />
+<%- include('./partials/header-post-link') %>
+
 
 <% if (user) { %>
   <main class="welcome fadein" id="user-home">
@@ -13,7 +16,7 @@
     </div>
   </main>
 
-  <section>
+  <section id="boat-animation">
     <img id="wave-1" class="waves seasick" src="https://i.imgur.com/lgKcxfP.png">
     <img id="boat-pic" class="slide-in" src="https://i.imgur.com/x8iOF5P.png">
     <img id="wave-2" class="waves seasick2" src="https://i.imgur.com/K2z3Z9j.png">
