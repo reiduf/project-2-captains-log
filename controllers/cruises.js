@@ -29,11 +29,7 @@ async function create(req, res) {
 
   try {
     await Cruise.create(req.body)
-    const userCruises = await Cruise.find({ user: req.user._id });
-    res.render('cruises/index', { 
-      title: 'My Cruises',
-      userCruises
-    })
+    res.redirect('/cruises');
   } catch(err) {
     console.log(err)
     res.render('cruises/new', { errorMsg: err.message })

@@ -10,7 +10,9 @@ const logSchema = new Schema({
     max: 5
   },
   favActivity: String,
-  comment: String
+  comment: String,
+  seaConditions: String,
+  weather: String
 }, {
   timestamps: true
 });

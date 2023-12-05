@@ -73,11 +73,11 @@ header>nav>a {
 }
 
 .seasick {
-  animation: seasick 8s infinite;
+  animation: seasick 6s infinite;
 }
 
 .seasick2 {
-  animation: seasick2 8s infinite;
+  animation: seasick2 6s infinite;
 }
 
 #boat-pic {
@@ -187,6 +187,40 @@ main, #signup-box, #new-cruise-form {
   to   { opacity: 1; }
 }
 
+#my-cruises {
+  height: 60vh
+}
+
+#my-cruises, #user-cruise-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-cruise-gallery {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5vmin;
+  max-width: 80vw;
+}
+
+.user-cruise-thumbnail {
+  height: 20vmin;
+  width: 20vmin;
+  background: green;
+  margin: 2vmin 2vmin;
+  padding: 2vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.user-cruise-thumbnail p:first-child {
+  font-family: 'Vidaloka', serif;
+}
+
 @media (max-width: 1250px) {
   .welcome a {
     display: block;
@@ -249,5 +283,14 @@ main, #signup-box, #new-cruise-form {
 
   #logout {
     font-size: 4vmin;
+  }
+
+  #user-cruise-gallery {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  .user-cruise-thumbnail {
+    width: 79%;
   }
 }
