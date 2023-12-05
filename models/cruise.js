@@ -34,7 +34,7 @@ const cruiseSchema = new Schema({
   startDate: Date,
   endDate: Date,
   itinerary: String,
-  log: [logSchema],
+  logs: [logSchema],
   notes: String,
   user: {
     type: Schema.Types.ObjectId,

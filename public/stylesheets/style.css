@@ -87,7 +87,7 @@ body {
 }
 
 /* index/login page styling - unauthed user */
-main, #signup-box {
+main, #signup-box, #new-cruise-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,6 +234,5 @@ nav>a {
     display: inline-block;
     font-size: 4vmin;
     padding: 2vmin 3vmin;
-  }
-  
+  } 
 }
