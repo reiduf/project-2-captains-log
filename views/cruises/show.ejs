@@ -6,18 +6,28 @@
 
 <main>
   <aside>
+    <div class="modify-icons">
+      <a href="#"><div id="edit"></div></a>
+      <a href="#"><div id="delete"></div></a>
+    </div>
+    <img class="tape tape1" src="https://i.imgur.com/KiS8n2G.png" alt="tape">
     <h2><%= cruise.title %></h2>
-    <p><%= cruise.numDays %>-day trip to <%= cruise.itinerary %> aboard the <%= cruise.cruiseBoat %></p>
-    <p><%= cruise.cruiseLine %> Cruise Line</p>
-    <p>Embarks: <%= cruise.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
-    <p>Debarks: <%= cruise.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
-    <p>Notes: <%= cruise.notes %></p>
-    <p>Logs: <%= cruise.logs.length %></p>
+    <p><%= cruise.numDays %>-day trip to <%= cruise.itinerary %></p>
+    <div>
+      <p><span>Ship:</span> <%= cruise.cruiseBoat %></p>
+      <p><span>Cruise Line:</span> <%= cruise.cruiseLine %> Cruise Line</p>
+      <p><span>Embarks:</span> <%= cruise.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+      <p><span>Debarks:</span> <%= cruise.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+      <p><span>Notes:</span> <%= cruise.notes %></p>
+      <p><span>Logs:</span> <%= cruise.logs.length %></p>
+      <img class="tape tape2" src="https://i.imgur.com/KiS8n2G.png" alt="tape">
+    </div>
   </aside>
 
   <section>
     <h2>Logs</h2>
   </section>
+
 </main>
 
 

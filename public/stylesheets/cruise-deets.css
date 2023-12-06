@@ -12,6 +12,83 @@ main {
 aside {
   height: 60vh;
   padding: 5vmin;
-  background-color: beige;
+  background-color: rgb(238, 223, 198);
   margin: 0 30vmin;
+  font-family: 'Special Elite', serif;
+  line-height: 4vmin;
+  text-align: center;
+  border-radius: 1vmin;
+  position: relative
 }
+
+.modify-icons {
+  position: absolute;
+  top: -1.75vmin;
+  right: -2vmin;
+  display: flex;
+}
+
+.modify-icons div {
+  height: 3vmin;
+  width: 3vmin;
+  margin: 0.25vmin;
+  border-radius: 50%;
+}
+
+#edit {
+  background: url('https://i.imgur.com/b98c7LC.png');
+  background-color: rgb(169, 59, 59);
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#delete {
+  background: url('https://i.imgur.com/Ru2aqyW.png');
+  background-color: rgb(169, 59, 59);
+  background-size: 53%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+aside > div {
+  text-align: left;
+}
+
+h2 {
+  margin-bottom: 0;
+  text-decoration: underline dotted;
+}
+
+aside > p {
+  margin-bottom: 3vmin;
+}
+
+p {
+  max-width: 43vmin;
+  margin: 0;
+}
+
+span {
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin-right: 0.5vmin;
+}
+
+.tape {
+  position: absolute;
+  width: 13vmin;
+}
+
+.tape1 {
+  top: -1vmin;
+  left: -3.5vmin;
+  transform: rotate(-37deg)
+}
+
+.tape2 {
+  bottom: -0.5vmin;
+  right: -3.5vmin;
+  transform: rotate(144deg)
+}
+
