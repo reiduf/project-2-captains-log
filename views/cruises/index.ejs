@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/mycruises.css" />
 <%- include('../partials/header-post-link') %>
 
-<div id="center-this"><h1>My Cruises (<%= userCruises.length %>)</h1></div>
+<div class="fadein" id="center-this"><h1>My Cruises (<%= userCruises.length %>)</h1></div>
 <main class="fadein" id="my-cruises">
   <% userCruises.forEach(function(cruise, idx) { %>
   <a href="/cruises/<%= cruise._id %>">

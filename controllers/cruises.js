@@ -3,7 +3,8 @@ const Cruise = require("../models/cruise");
 module.exports = {
   index,
   new: newCruise,
-  create
+  create,
+  show
 };
 
 function newCruise(req, res) {
@@ -34,4 +35,9 @@ async function create(req, res) {
     console.log(err)
     res.render('cruises/new', { errorMsg: err.message })
   }
+}
+
+async function show(req, res) {
+  const cruise = await Cruise.findById(req.params.id)
+  res.render('cruises/show', { cruise, title: 'Cruise Details' })
 }
