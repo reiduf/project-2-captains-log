@@ -10,5 +10,6 @@ router.post('/', ensureLoggedIn, cruisesCtrl.create)
 router.get('/:id', ensureLoggedIn, cruisesCtrl.show)
 router.delete('/:id', ensureLoggedIn, cruisesCtrl.delete)
 router.put('/:id', ensureLoggedIn, cruisesCtrl.update)
+router.get('/:id/edit', ensureLoggedIn, cruisesCtrl.edit)
 
 module.exports = router;

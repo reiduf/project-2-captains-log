@@ -6,7 +6,8 @@ module.exports = {
   create,
   show,
   delete: deleteCruise,
-  update
+  update,
+  edit
 };
 
 function newCruise(req, res) {
@@ -23,7 +24,7 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
-    
+  console.log(req.body)  
   req.body.user = req.user._id;
  
   for (let key in req.body) {
@@ -60,4 +61,10 @@ async function update(req, res) {
   }
 
   await cruise.save();
+  res.redirect(`/cruises/${cruise._id}`)
+}
+
+async function edit(req, res) {
+  const cruise = await Cruise.findById(req.params.id)
+  res.render('cruises/edit', { cruise, title: 'Edit Cruise' })
 }

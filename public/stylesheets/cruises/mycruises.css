@@ -9,7 +9,7 @@ a {
 }
 
 #my-cruises {
-  height: 100vh;
+  /* height: 80vh; */
   width: 80vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -24,7 +24,7 @@ article {
   align-items: center;
   background: rgb(252, 241, 227);
   width: 100%;
-  height: 100%;
+  height: 25vh;
   margin: 0 auto;
   box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48);
   border-radius: 2vmin;
