@@ -13,7 +13,7 @@ aside {
   height: 60vh;
   padding: 5vmin;
   background-color: rgb(238, 223, 198);
-  margin: 0 30vmin;
+  margin: 0 20vmin;
   font-family: 'Special Elite', serif;
   line-height: 4vmin;
   text-align: center;
@@ -69,12 +69,14 @@ aside > p {
 p {
   max-width: 43vmin;
   margin: 0;
+  color: rgb(76, 76, 116);
 }
 
 span {
   text-decoration: underline;
   text-transform: uppercase;
   margin-right: 0.5vmin;
+  color: black;
 }
 
 .tape {
