@@ -2,21 +2,24 @@
 <link rel="stylesheet" href="/stylesheets/mycruises.css" />
 <%- include('../partials/header-post-link') %>
 
-<div id="center-this"><h1>My Cruises</h1></div>
+<div id="center-this"><h1>My Cruises (<%= userCruises.length %>)</h1></div>
 <main class="fadein" id="my-cruises">
-  <% userCruises.forEach(function(cruises, idx) { %>
-  <article>
-    <div class="thumbnail-img"></div>
-    <div class="cruise-desc">
-      <h2><%= cruises.title %></h2>
-      <p>
-        <%= cruises.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> 
-        to
-        <%= cruises.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
-      <p><span>Itinerary: </span> <%= cruises.itinerary %></p>
-      <span id="logs"><%= cruises.logs.length %> Logs</span>
-    </div>
-  </article>
+  <% userCruises.forEach(function(cruise, idx) { %>
+  <a href="/cruises/<%= cruise._id %>">
+      <article>
+      <div class="thumbnail-img"></div>
+      <div class="cruise-desc">
+        <h2><%= cruise.title %></h2>
+        <p>
+          <%= cruise.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> 
+          to
+          <%= cruise.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %>
+        </p>
+        <p><span>Itinerary: </span> <%= cruise.itinerary %></p>
+        <p><%= cruise.logs.length %> Logs</p>
+      </div>
+    </article>
+  </a>
   <% }); %>
 </main>
 

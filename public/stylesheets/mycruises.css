@@ -3,13 +3,19 @@
   text-align: center;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 #my-cruises {
-  height: 70vh;
-  width: 60vw;
+  height: 100vh;
+  width: 80vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0 auto;
+  margin: 4vmin auto;
   gap: 3vmin;
+  max-height: auto;
 }
 
 article {
@@ -36,29 +42,25 @@ article {
 
 .cruise-desc {
   height: 80%;
-  width: 60%;
+  width: 80%;
   position: relative;
+  margin-right: 2vmin;
 }
 
 article h2 {
   font-family: 'Vidaloka', serif;
   margin-bottom: 1vmin;
+  font-size: 3vmin;
 }
 
 .cruise-desc p {
   font-size: 2vmin;
-  line-height: 3vmin;
+  line-height: 5vmin;
 }
 
 .cruise-desc span {
   font-weight: 500;
 }
-
-#logs {
-  position: absolute;
-  bottom: 0;
-}
-
 
 /* media queries */
 @media (max-width: 1600px) {
@@ -73,7 +75,16 @@ article h2 {
     width: 80vw;
   }
 
+  article h2 {
+    font-size: 4vmin;
+  }
+
+  .cruise-desc p, .cruise-desc span {
+    font-size: 3vmin;
+  }
+
   #my-cruises {
     height: auto;
   }
 }
+

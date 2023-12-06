@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -9,10 +10,11 @@ body {
 }
 
 h1 {
-  font-size: 5vmin;
+  font-family: "Vidaloka", serif;
+  font-size: 4vmin;
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.25vmin;
+  letter-spacing: 0.7vmin;
   margin-bottom: 3vmin;
 }
 

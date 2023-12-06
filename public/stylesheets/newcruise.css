@@ -1,0 +1,46 @@
+#new-cruise-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.25vmin;
+  margin-bottom: 0.5vmin;
+}
+
+input, select, textarea {
+  margin-bottom: 3vmin;
+  width: 30%;
+  text-align: center;
+  font-family: 'Work Sans';
+  font-weight: 400;
+  padding: 0.5vmin;
+  border-radius: 2vmin;
+  border: 2px solid black;
+  color: darkblue;
+}
+
+input[type="submit"] {
+  width: 18%;
+  cursor: pointer;
+  border: none;
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.25vmin;
+}
+
+@media (max-width: 1200px) {
+  input, select, textarea {
+    width: 70%;
+    font-size: 4vmin;
+  }
+
+  label {
+    font-size: 4vmin;
+  }
+}
+
