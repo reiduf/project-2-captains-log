@@ -19,7 +19,12 @@ h1 {
 }
 
 .fadein {
-  animation: fadein 3s;
+  animation: fadein 2s;
+}
+
+.grow:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
 }
 
 @keyframes fadein {

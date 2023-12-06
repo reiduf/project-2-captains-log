@@ -1,3 +1,17 @@
-h3 {
-  color: blue;
+body {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5vmin;
+}
+
+aside {
+  height: 60vh;
+  padding: 5vmin;
+  background-color: beige;
+  margin: 0 30vmin;
 }

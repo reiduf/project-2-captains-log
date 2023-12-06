@@ -6,7 +6,7 @@
 <main class="fadein" id="my-cruises">
   <% userCruises.forEach(function(cruise, idx) { %>
   <a href="/cruises/<%= cruise._id %>">
-      <article>
+      <article class="grow">
       <div class="thumbnail-img"></div>
       <div class="cruise-desc">
         <h2><%= cruise.title %></h2>

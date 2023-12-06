@@ -2,6 +2,23 @@
 <link rel="stylesheet" href="/stylesheets/cruise-deets.css" />
 <%- include('../partials/header-post-link') %>
 
-<h3>test</h3>
+<h1>Cruise Details</h1>
+
+<main>
+  <aside>
+    <h2><%= cruise.title %></h2>
+    <p><%= cruise.numDays %>-day trip to <%= cruise.itinerary %> aboard the <%= cruise.cruiseBoat %></p>
+    <p><%= cruise.cruiseLine %> Cruise Line</p>
+    <p>Embarks: <%= cruise.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+    <p>Debarks: <%= cruise.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+    <p>Notes: <%= cruise.notes %></p>
+    <p>Logs: <%= cruise.logs.length %></p>
+  </aside>
+
+  <section>
+    <h2>Logs</h2>
+  </section>
+</main>
+
 
 <%- include('../partials/footer') %>
