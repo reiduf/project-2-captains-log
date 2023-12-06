@@ -21,25 +21,27 @@ aside {
   position: relative
 }
 
-.modify-icons {
+#edit-delete-icons {
   position: absolute;
   top: -1.75vmin;
   right: -2vmin;
   display: flex;
 }
 
-.modify-icons div {
+button, div>a {
   height: 3vmin;
   width: 3vmin;
   margin: 0.25vmin;
   border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
 
 #edit {
   background: url('https://i.imgur.com/b98c7LC.png');
   background-color: rgb(169, 59, 59);
-  background-size: 60%;
-  background-position: center;
+  background-size: 56%;
+  background-position: 50% 43%;
   background-repeat: no-repeat;
 }
 
@@ -47,7 +49,7 @@ aside {
   background: url('https://i.imgur.com/Ru2aqyW.png');
   background-color: rgb(169, 59, 59);
   background-size: 53%;
-  background-position: center;
+  background-position: 50% 43%;
   background-repeat: no-repeat;
 }
 

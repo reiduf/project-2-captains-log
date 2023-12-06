@@ -1,10 +1,10 @@
 <%- include('../partials/header-pre-link') %>
-<link rel="stylesheet" href="/stylesheets/cruises/newcruise.css" />
+<link rel="stylesheet" href="/stylesheets/cruises/editcruise.css" />
 <%- include('../partials/header-post-link') %>
 
 
-<form class="fadein" id="new-cruise-form" action="/cruises" method="POST">
-    <h1>Add New Cruise</h1>
+<form class="fadein" id="new-cruise-form" action="/cruises/<% cruise._id %>" method="PUT">
+    <h1>Edit Cruise</h1>
     <label>Cruise Title:</label>
     <input type="text" name="title" maxlength="30" placeholder="'Disney Hawaiian from Honolulu'" />
 
@@ -30,12 +30,12 @@
     <input type="date" name="endDate">
 
     <label>Itinerary:</label>
-    <input type="text" name="itinerary" placeholder="'Eastern Caribbean'">
+    <input type="text" name="itinerary">
 
     <label>Notes About This Cruise:</label>
-    <textarea name="notes" rows="4" cols="50" placeholder="'Halloween on the High Seas! Sydney's first cruise with us.'"></textarea>
+    <textarea name="notes" rows="4" cols="50"></textarea>
 
-    <input type="submit" value="Add Cruise">    
+    <input type="submit" value="Update Cruise">    
 </form>
 
 <%- include('../partials/footer') %>

@@ -4,7 +4,9 @@ module.exports = {
   index,
   new: newCruise,
   create,
-  show
+  show,
+  delete: deleteCruise,
+  update
 };
 
 function newCruise(req, res) {
@@ -40,4 +42,22 @@ async function create(req, res) {
 async function show(req, res) {
   const cruise = await Cruise.findById(req.params.id)
   res.render('cruises/show', { cruise, title: 'Cruise Details' })
+}
+
+async function deleteCruise(req, res) {
+  await Cruise.deleteOne({ _id: req.params.id });
+  res.redirect('/cruises');
+}
+
+async function update(req, res) {
+  const cruise = await Cruise.findById(req.params.id);
+  const reqBody = req.body;
+
+  for (let key in cruise) {
+    if (reqBody[key]) {
+      cruise[key] = reqBody[key];
+    }
+  }
+
+  await cruise.save();
 }

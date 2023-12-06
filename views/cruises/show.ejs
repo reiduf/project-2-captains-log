@@ -1,15 +1,19 @@
 <%- include('../partials/header-pre-link') %>
-<link rel="stylesheet" href="/stylesheets/cruise-deets.css" />
+<link rel="stylesheet" href="/stylesheets/cruises/cruise-deets.css" />
 <%- include('../partials/header-post-link') %>
 
-<h1>Cruise Details</h1>
+<h1 class="fadein">Cruise Details</h1>
 
-<main>
+<main class="fadein">
   <aside>
-    <div class="modify-icons">
-      <a href="#"><div id="edit"></div></a>
-      <a href="#"><div id="delete"></div></a>
+    <div id="edit-delete-icons">
+ 
+      <a href="/cruises/<%= cruise._id %>/update" class="modify-icons" id="edit"></a>
+      <form action="/cruises/<%= cruise._id %>/?_method=DELETE" method="POST">
+        <button class="modify-icons" id="delete" type="submit"></button>
+      </form>
     </div>
+
     <img class="tape tape1" src="https://i.imgur.com/KiS8n2G.png" alt="tape">
     <h2><%= cruise.title %></h2>
     <p><%= cruise.numDays %>-day trip to <%= cruise.itinerary %></p>
