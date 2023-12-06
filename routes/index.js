@@ -4,7 +4,9 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: "Captain's Log - Home" });
+  res.render('index', { 
+    title: "Captain's Log - Home"
+  });
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -18,8 +20,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/',
-    failureRedirect: '/login'
+    successRedirect: '/mypassport',
+    failureRedirect: '/'
   }
 ));
 

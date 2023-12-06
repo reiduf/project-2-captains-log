@@ -62,8 +62,9 @@ h2 {
   text-decoration: underline dotted;
 }
 
-aside > p {
+#desc {
   margin-bottom: 3vmin;
+  line-height: 2.25vmin;
 }
 
 p {

@@ -1,0 +1,18 @@
+<%- include('./partials/header-pre-link') %>
+<link rel="stylesheet" href="/stylesheets/mypassport.css" />
+<%- include('./partials/header-post-link') %>
+
+<main class="welcome fadein" id="user-home">
+  <h1>Welcome, <%= user.firstName %>!</h1>
+  <h2><span>Cruiser Full Name: </span><%= user.name %></h2>
+
+  <p><span>Total Cruises: </span><%= userCruises.length %></p>
+
+  <p><span>Total Days Sailed: </span></p>
+
+  <p><span>Locations Traveled: </span></p>
+  
+  <p><span>Cruise Lines: </span></p>
+</main>
+
+<%- include('./partials/footer') %>

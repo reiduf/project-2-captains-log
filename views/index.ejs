@@ -3,11 +3,7 @@
 <%- include('./partials/header-post-link') %>
 
 
-<% if (user) { %>
-  <main class="welcome fadein" id="user-home">
-    <h1>Welcome, <%= user.firstName %>!</h1>
-  </main>
-<% } else { %>
+<% if (!user) { %>
   <main class="welcome" id="signup">
     <div id="signup-box">
       <h1>Ahoy There!</h1>

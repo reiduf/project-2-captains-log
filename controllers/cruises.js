@@ -16,7 +16,6 @@ function newCruise(req, res) {
 
 async function index(req, res) {
   const userCruises = await Cruise.find({ user: req.user._id });
-  console.log(userCruises)
   res.render('cruises/index', { 
     title: 'My Cruises',
     userCruises 
@@ -24,7 +23,6 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
-  console.log(req.body)  
   req.body.user = req.user._id;
  
   for (let key in req.body) {

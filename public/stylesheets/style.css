@@ -44,7 +44,7 @@ hr {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 3vmin;
+  padding: 2.5vmin;
 }
 
 header>nav {
@@ -71,20 +71,6 @@ header>nav>a {
 }
 
 @media (max-width: 1250px) {
-  .welcome a {
-    display: block;
-    margin: 5%;
-    text-align: center;
-  }
-
-  .welcome > h1 {
-    max-width: 80vw;
-  }
-
-  .welcome {
-    height: 70v;
-  }
-
   hr {
     display: block;
     width: 90vw;
