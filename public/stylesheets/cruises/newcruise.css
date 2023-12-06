@@ -23,14 +23,24 @@ input, select, textarea {
   color: darkblue;
 }
 
-input[type="submit"] {
-  width: 18%;
+#button-holder {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="submit"],input[type="reset"] {
+  width: 24vmin;
   cursor: pointer;
   border: none;
   background: black;
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.25vmin;
+  margin: 0 4vmin;
+}
+
+input[type="reset"] {
+  background: red;
 }
 
 @media (max-width: 1200px) {
@@ -41,6 +51,11 @@ input[type="submit"] {
 
   label {
     font-size: 4vmin;
+  }
+
+  input[type="submit"],input[type="reset"] {
+    width: 35vmin;
+    margin-top: 5vmin;
   }
 }
 

@@ -4,7 +4,7 @@
 
 
 <form class="fadein" id="new-cruise-form" action="/cruises/<%= cruise._id %>/?_method=PUT" method="POST">
-    <h1>Edit Cruise</h1>
+    <h1>Edit: <%= cruise.title %></h1>
     <label>Cruise Title:</label>
     <input type="text" name="title" maxlength="30" value="<%= cruise.title %>" />
 
@@ -35,7 +35,10 @@
     <label>Notes About This Cruise:</label>
     <textarea name="notes" rows="4" cols="50"><%= cruise.notes %></textarea>
 
-    <input type="submit" value="Update Cruise">
+    <div id="button-holder">
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Update Cruise">
+    </div>
 </form>
 
 <%- include('../partials/footer') %>

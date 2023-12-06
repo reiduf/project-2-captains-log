@@ -34,8 +34,11 @@
 
     <label>Notes About This Cruise:</label>
     <textarea name="notes" rows="4" cols="50" placeholder="'Halloween on the High Seas! Sydney's first cruise with us.'"></textarea>
-
-    <input type="submit" value="Add Cruise">    
+    
+    <div id="button-holder">
+        <input type="reset" value="Clear Form">
+        <input type="submit" value="Add Cruise">    
+    </div>
 </form>
 
 <%- include('../partials/footer') %>
