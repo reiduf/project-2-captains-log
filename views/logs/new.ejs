@@ -1,0 +1,56 @@
+<%- include('../partials/header-pre-link') %>
+<link rel="stylesheet" href="/stylesheets/cruises/newcruise.css" />
+<%- include('../partials/header-post-link') %>
+
+
+<form action="/cruises/<%= cruise._id %>/logs" method="POST" id="new-log">
+  <div id="center-the-div"><h1>Add Log For:<br /><%= cruise.title %> </h1></div>
+  
+  <label>Log Date:</label>
+  <input type="date" name="entryDate">
+
+  <label>What port were you at today (or at sea)?</label>
+  <input type="text" name="currentLoc" maxlength="50" placeholder="'Puerto Vallarta'" />
+
+  
+  <label>How were the sea conditions today?</label>
+  <select name="seaConditions">
+    <option value="Smooth sailing!">Smooth sailing!</option>
+    <option value="A little movement, can't complain">A little movement, can't complain</option>
+    <option value="Pretty standard day on the ocean">Pretty standard day on the ocean</option>
+    <option value="Choppy, I need to put on my sea legs">Choppy, I need to put on my sea legs</option>
+    <option value="Insane, get me off this ship!">Insane, get me off this ship!</option>
+  </select>
+
+  <label>How was the weather today?</label>
+  <select name="weather">
+    <option value="☀️">☀️</option>
+    <option value="🌬️">🌬️</option>
+    <option value="🌥️">🌥️</option>
+    <option value="🌧️">🌧️</option>
+    <option value="⛈️">⛈️</option>
+    <option value="🌪️">🌪️</option>
+  </select>
+  
+  <label>How was your day?</label>
+  <select name="dayRating">
+      <option value="😭 - Awful">😭 - Awful</option>
+      <option value="🙁 - Not the best">🙁 - Not the best</option>
+      <option value="🙂 - Good">🙂 - Good</option>
+      <option value="😃 - Great!">😃 - Great!</option>
+      <option selected value="😁 - Fantastic!">😁 - Fantastic!</option>
+  </select>
+
+  <label>What was the highlight of your day?</label>
+  <input type="text" name="favActivity" maxlength="50" placeholder="'Snorkeling at the coral reef!'" />
+
+  <label>What'd you do today?</label>
+  <textarea name="comment" rows="5" cols="50" placeholder="'I had 6 mojitos and passed out on a lounge chair. Wore sweatpants to dinner because my pants no longer fit. Had a massage at the spa.'"></textarea>
+
+  <div id="button-holder">
+    <input type="submit" value="Add Log">    
+    <input type="reset" value="Clear Form">
+</div>
+</form>
+
+<%- include('../partials/footer') %>

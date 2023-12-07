@@ -2,17 +2,41 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const logSchema = new Schema({
-  date: Date,
+  entryDate: Date,
   dayRating: {
-    type: Number,
-    required: true,
-    min: 1,
-    max: 5
+    type: String,
+    enum: [
+      "😭 - Awful",
+      "🙁 - Not the best",
+      "🙂 - Good",   
+      "😃 - Great!",
+      "😁 - Fantastic!"
+    ]
   },
   favActivity: String,
   comment: String,
-  seaConditions: String,
-  weather: String
+  seaConditions: {
+    type: String,
+    enum: [
+      "Smooth sailing",
+      "A little movement, can't complain",
+      "Pretty standard day on the ocean",
+      "Choppy, I need to put on my sea legs",
+      "Insane, get me off this ship!"
+    ]
+  },
+  weather: {
+    type: String,
+    enum: [
+      "☀️",
+      "🌬️",
+      "🌥️",
+      "🌧️",
+      "⛈️",
+      "🌪️"
+    ]
+  },
+  currentLoc: String
 }, {
   timestamps: true
 });

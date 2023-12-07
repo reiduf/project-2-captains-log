@@ -1,8 +1,12 @@
-#new-cruise-form {
+#new-cruise-form, #new-log {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#center-the-div {
+  text-align: center;
 }
 
 label {

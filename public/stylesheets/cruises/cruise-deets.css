@@ -106,7 +106,7 @@ section {
 
 section h2 {
   position: absolute;
-  left: 47%;
+  left: 46%;
   top: 1.25vmin;
   color: white;
 }
@@ -122,7 +122,8 @@ section h2 {
   background-size: 100% 20px;
   height: 60vh;
   width: 50vw;
-  border-top: 6vmin solid rgb(206, 187, 156);
+  border-top: 5.5vmin solid rgb(223, 204, 173);
+  border-radius: 0.75vmin 0 0 0;
 }
 
 #add-log {
