@@ -18,7 +18,8 @@ aside {
   text-align: center;
   margin-right: 10vmin;
   border-radius: 1vmin;
-  position: relative
+  position: relative;
+  box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48);
 }
 
 #edit-delete-icons {
@@ -100,18 +101,28 @@ span {
 /* logs styling */
 section {
   position: relative;
+  box-shadow: 1.5px 3.0px 3.0px hsl(0deg 0% 0% / 0.45);
 }
 
 section h2 {
   position: absolute;
   left: 47%;
-  top: 1vmin;
+  top: 1.25vmin;
+  color: white;
 }
 
 #logs-grid {
-  background: rgb(244, 235, 224);
+  background: linear-gradient(
+    to bottom,
+    #f4ebe0,
+    #f4ebe0 90%,
+    #adf2f4 10%,
+    #adf2f4
+  );
+  background-size: 100% 20px;
   height: 60vh;
   width: 50vw;
+  border-top: 6vmin solid rgb(206, 187, 156);
 }
 
 #add-log {
@@ -132,3 +143,4 @@ section h2 {
   align-items: center;
   justify-content: center;
 }
+
