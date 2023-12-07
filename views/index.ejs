@@ -4,11 +4,13 @@
 
 
 <% if (!user) { %>
-  <main class="welcome" id="signup">
+  <main id="signup">
     <div id="signup-box">
       <h1>Ahoy There!</h1>
       <p>Relive your cruise adventures with Captains Log! Create cruise logs, document daily highlights, and watch your travel legacy unfold in a personalized passport, capturing the richness of maritime experiences.</p>
-      <button><a id="log-in" href="/auth/google" class="login">Sign-up / Log-In</a><img src="https://i.imgur.com/FHjYyi0.png"/></button>
+      <a id="log-in" href="/auth/google" class="login">
+        <button>Sign-up / Log-In<img src="https://i.imgur.com/FHjYyi0.png"/></button>
+      </a>
     </div>
   </main>
 

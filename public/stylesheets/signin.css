@@ -38,16 +38,17 @@ main, #signup-box {
   border: 2px solid black;
   align-items: center;
   border-radius: 6vmin;
+  cursor: pointer;
 }
 
-#signup button a {
+#signup a {
   text-decoration: none;
   color: black;
-  margin-right: 1vmin;
 }
 
-#signup button img {
+#signup img {
   height: 30px;
+  margin-left: 1vmin;
 }
 
 /* boat and waves styling */
@@ -118,20 +119,6 @@ main, #signup-box {
     width: 35%;
   }
 
-  .welcome a {
-    display: block;
-    margin: 5%;
-    text-align: center;
-  }
-
-  .welcome > h1 {
-    max-width: 80vw;
-  }
-
-  .welcome {
-    height: 70vh;
-  }
-
   #signup {
     align-items: center;
     padding: 0;
@@ -144,7 +131,6 @@ main, #signup-box {
   }
 
   #signup button {
-    width: 50%;
     font-size: 3vmin;
   }
 }
