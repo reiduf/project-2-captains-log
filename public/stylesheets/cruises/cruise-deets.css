@@ -4,7 +4,7 @@ body {
 
 main {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 5vmin;
 }
@@ -13,10 +13,10 @@ aside {
   height: 60vh;
   padding: 5vmin;
   background-color: rgb(238, 223, 198);
-  margin: 0 20vmin;
   font-family: 'Special Elite', serif;
   line-height: 4vmin;
   text-align: center;
+  margin-right: 10vmin;
   border-radius: 1vmin;
   position: relative
 }
@@ -29,8 +29,8 @@ aside {
 }
 
 button, div>a {
-  height: 3vmin;
-  width: 3vmin;
+  height: 4vmin;
+  width: 4vmin;
   margin: 0.25vmin;
   border-radius: 50%;
   border: none;
@@ -41,7 +41,7 @@ button, div>a {
   background: url('https://i.imgur.com/b98c7LC.png');
   background-color: rgb(169, 59, 59);
   background-size: 56%;
-  background-position: 50% 43%;
+  background-position: 54% 43%;
   background-repeat: no-repeat;
 }
 
@@ -97,3 +97,38 @@ span {
   transform: rotate(144deg)
 }
 
+/* logs styling */
+section {
+  position: relative;
+}
+
+section h2 {
+  position: absolute;
+  left: 47%;
+  top: 1vmin;
+}
+
+#logs-grid {
+  background: rgb(244, 235, 224);
+  height: 60vh;
+  width: 50vw;
+}
+
+#add-log {
+  text-decoration: none;
+  position: absolute;
+  top: -1.75vmin;
+  right: -1vmin;
+}
+
+#add-log>div {
+  background: black;
+  color: white;
+  font-size: 3vmin;
+  border-radius: 50%;
+  width: 4vmin;
+  height: 4vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
