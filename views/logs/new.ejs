@@ -4,7 +4,7 @@
 
 
 <form action="/cruises/<%= cruise._id %>/logs" method="POST" id="new-log">
-  <div id="center-the-div"><h1>Add Log For:<br /><%= cruise.title %> </h1></div>
+  <div id="center-the-div"><h1>Add Log To:<br /><%= cruise.title %> </h1></div>
   
   <label>Log Date:</label>
   <input type="date" name="entryDate">
@@ -24,12 +24,12 @@
 
   <label>How was the weather today?</label>
   <select name="weather">
-    <option value="☀️">☀️</option>
-    <option value="🌬️">🌬️</option>
-    <option value="🌥️">🌥️</option>
-    <option value="🌧️">🌧️</option>
-    <option value="⛈️">⛈️</option>
-    <option value="🌪️">🌪️</option>
+    <option value="☀️ - Sunny">☀️ - Sunny</option>
+    <option value="🌬️ - Windy">🌬️ - Windy</option>
+    <option value="🌥️ - Cloudy">🌥️ - Cloudy</option>
+    <option value="🌧️ - Rainy">🌧️ - Rainy</option>
+    <option value="⛈️ - Stormy">⛈️ - Stormy</option>
+    <option value="🌪️ - Hurricane">🌪️ - Hurricane</option>
   </select>
   
   <label>How was your day?</label>
@@ -48,8 +48,8 @@
   <textarea name="comment" rows="5" cols="50" placeholder="'I had 6 mojitos and passed out on a lounge chair. Wore sweatpants to dinner because my pants no longer fit. Had a massage at the spa.'"></textarea>
 
   <div id="button-holder">
-    <input type="submit" value="Add Log">    
     <input type="reset" value="Clear Form">
+    <input type="submit" value="Add Log">    
 </div>
 </form>
 

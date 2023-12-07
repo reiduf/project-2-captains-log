@@ -28,12 +28,12 @@ const logSchema = new Schema({
   weather: {
     type: String,
     enum: [
-      "☀️",
-      "🌬️",
-      "🌥️",
-      "🌧️",
-      "⛈️",
-      "🌪️"
+      "☀️ - Sunny",
+      "🌬️ - Windy",
+      "🌥️ - Cloudy",
+      "🌧️ - Rainy",
+      "⛈️ - Stormy",
+      "🌪️ - Hurricane"
     ]
   },
   currentLoc: String

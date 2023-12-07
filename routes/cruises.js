@@ -13,5 +13,6 @@ router.delete('/:id', ensureLoggedIn, cruisesCtrl.delete)
 router.put('/:id', ensureLoggedIn, cruisesCtrl.update)
 router.get('/:id/edit', ensureLoggedIn, cruisesCtrl.edit)
 router.get('/:id/logs/new', ensureLoggedIn, logsCtrl.new)
+router.post('/:id/logs', ensureLoggedIn, logsCtrl.create)
 
 module.exports = router;
