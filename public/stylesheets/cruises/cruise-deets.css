@@ -29,7 +29,7 @@ aside {
   display: flex;
 }
 
-button, div>a {
+form > button, div>a {
   height: 4vmin;
   width: 4vmin;
   margin: 0.25vmin;
@@ -71,7 +71,7 @@ h2 {
 p {
   max-width: 43vmin;
   margin: 0;
-  color: rgb(76, 76, 116);
+  color: rgb(55, 55, 124);
 }
 
 span {
@@ -119,11 +119,14 @@ section h2 {
     #adf2f4 10%,
     #adf2f4
   );
-  background-size: 100% 20px;
+  background-size: 100% 2.5vmin;
   height: 60vh;
   width: 50vw;
   border-top: 5.5vmin solid rgb(223, 204, 173);
   border-radius: 0.75vmin 0 0 0;
+  font-family: 'Special Elite', serif;
+  padding-top: 3.1vmin;
+  text-align: left;
 }
 
 #add-log {
@@ -144,4 +147,25 @@ section h2 {
   align-items: center;
   justify-content: center;
 }
+
+#logs-grid>div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1vmin;
+  margin-left: 3vmin;
+}
+
+.log-title {
+  font-size: 1.7vmin;
+  line-height: 1.7vmin;
+  display: inline-block;
+}
+
+.log-title a {
+  color: black;
+  text-transform: uppercase;
+  margin-left: 3vmin;
+}
+
+
 

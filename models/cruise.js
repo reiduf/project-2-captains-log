@@ -50,6 +50,7 @@ const cruiseSchema = new Schema({
   numDays: {
     type: Number,
     min: 1,
+    max: 21,
     required: true
   },
   cruiseLine: {

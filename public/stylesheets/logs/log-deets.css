@@ -1,0 +1,31 @@
+body {
+  overflow: hidden;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 90vh;
+  position: relative;
+}
+
+#paper {
+  height: 85%;
+  width: 40%;
+  background: #FCF5E5;
+  box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48);
+  border-radius: 0.25vmin 0.25vmin;
+  padding: 3vmin;
+  position: absolute;
+  bottom: -100vmin;
+}
+
+@keyframes slide-up {
+  0% { bottom: -100vmin; }
+  100% { bottom: 0; }
+}
+
+.slide-up {
+  animation: 0.5s slide-up;
+  animation-fill-mode: forwards;
+}

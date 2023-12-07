@@ -2,7 +2,8 @@ const Cruise = require("../models/cruise");
 
 module.exports = {
   new: newLog,
-  create
+  create,
+  show
 };
 
 async function newLog(req,res) {
@@ -20,4 +21,10 @@ async function create(req, res) {
     console.log(err);
   }
   res.redirect(`/cruises/${cruise._id}`);
+}
+
+async function show(req, res) {
+  const cruise = await Cruise.findById(req.params.cruiseId);
+
+  res.render('logs/show', { cruise, title: 'Log Details'})
 }
