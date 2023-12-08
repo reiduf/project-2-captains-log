@@ -5,7 +5,8 @@ module.exports = {
   create,
   show,
   edit,
-  update
+  update,
+  delete: deleteLog
 };
 
 async function newLog(req,res) {
@@ -56,4 +57,12 @@ async function update(req,res) {
     console.log(err);
   }
   res.redirect(`/cruises/${cruise._id}/logs/${log._id}`);
+}
+
+async function deleteLog(req, res) {
+  const cruise = await Cruise.findById(req.params.cruiseId);
+  cruise.logs.remove(req.params.logId)
+
+  await cruise.save();
+  res.redirect(`/cruises/${cruise._id}`)
 }

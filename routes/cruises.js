@@ -17,5 +17,6 @@ router.get('/:cruiseId/logs/:logId', ensureLoggedIn, logsCtrl.show)
 router.post('/:id/logs', ensureLoggedIn, logsCtrl.create)
 router.get('/:cruiseId/logs/:logId/edit', ensureLoggedIn, logsCtrl.edit)
 router.put('/:cruiseId/logs/:logId', logsCtrl.update)
+router.delete('/:cruiseId/logs/:logId', logsCtrl.delete)
 
 module.exports = router;
