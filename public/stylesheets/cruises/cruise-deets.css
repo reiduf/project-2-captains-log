@@ -177,5 +177,54 @@ section h2 {
   margin-left: 3vmin;
 }
 
+@media (max-width: 1600px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 80vw;
+    margin: 4vmin 0;
+    height: fit-content;
+  }
+
+  aside h2 {
+    font-size: 5vmin;
+    margin-bottom: 1vmin;
+    line-height: 6vmin;
+  }
+  aside p {
+    max-width: 100%;
+    font-size: 4.25vmin;
+    line-height: 6vmin;
+  }
+
+  #desc {
+    font-size: 4.25vmin;
+    line-height: 6vmin;
+  }
+
+  #cruise-details-box {
+    text-align: justify;
+  }
+
+  section, #logs-grid {
+    width: 80vw;
+  }
+
+  #logs-grid {
+    height: fit-content;
+    flex-wrap: nowrap;
+  }
+
+  #logs-grid p {
+    font-size: 4vmin;
+    line-height: 5vmin;
+    margin-bottom: 3vmin;
+    border-top: 4vmin;
+  }
+}
+
+
 
 
