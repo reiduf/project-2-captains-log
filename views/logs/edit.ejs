@@ -1,0 +1,57 @@
+<%- include('../partials/header-pre-link') %>
+<link rel="stylesheet" href="/stylesheets/cruises/newcruise.css" />
+<%- include('../partials/header-post-link') %>
+
+
+<form class="fadein" action="/cruises/<%= cruise._id %>/logs/<%= log._id %>/?_method=PUT" method="POST" id="new-log">
+  <div id="center-the-div"><h1>Edit Log For:<br /><%= cruise.title %> </h1></div>
+  
+  <label>Log Date:</label>
+  <input type="date" name="entryDate" value="<%= `${log.entryDate.toISOString().split('T')[0]}` %>">
+
+  <label>What port were you at today (or at sea)?</label>
+  <input type="text" name="currentLoc" maxlength="50" value="<%= log.currentLoc %>" />
+
+  
+  <label>How were the sea conditions today?</label>
+  <select name="seaConditions">
+    <option <%= log.seaConditions === "Smooth sailing!" ? "selected" : "" %> value="Smooth sailing!">Smooth sailing!</option>
+    <option <%= log.seaConditions === "A little movement, can't complain" ? "selected" : "" %> value="A little movement, can't complain">A little movement, can't complain</option>
+    <option <%= log.seaConditions === "Pretty standard day on the ocean" ? "selected" : "" %> value="Pretty standard day on the ocean">Pretty standard day on the ocean</option>
+    <option <%= log.seaConditions === "Choppy, I need to put on my sea legs" ? "selected" : "" %> value="Choppy, I need to put on my sea legs">Choppy, I need to put on my sea legs</option>
+    <option <%= log.seaConditions === "Insane, get me off this ship!" ? "selected" : "" %> value="Insane, get me off this ship!">Insane, get me off this ship!</option>
+  </select>
+
+  <label>How was the weather today?</label>
+  <select name="weather">
+    <option <%= log.weather === "☀️ - Sunny" ? "selected" : "" %> value="☀️ - Sunny">☀️ - Sunny</option>
+    <option <%= log.weather === "🌬️ - Windy" ? "selected" : "" %> value="🌬️ - Windy">🌬️ - Windy</option>
+    <option <%= log.weather === "🌥️ - Cloudy" ? "selected" : "" %> value="🌥️ - Cloudy">🌥️ - Cloudy</option>
+    <option <%= log.weather === "🌧️ - Rainy" ? "selected" : "" %> value="🌧️ - Rainy">🌧️ - Rainy</option>
+    <option <%= log.weather === "⛈️ - Stormy" ? "selected" : "" %> value="⛈️ - Stormy">⛈️ - Stormy</option>
+    <option <%= log.weather === "🌪️ - Hurricane" ? "selected" : "" %> value="🌪️ - Hurricane">🌪️ - Hurricane</option>
+  </select>
+  
+  <label>How was your day?</label>
+  <select name="dayRating">
+      <option <%= log.dayRating === "😭 - Awful" ? "selected" : "" %> value="😭 - Awful">😭 - Awful</option>
+      <option <%= log.dayRating === "🙁 - Not the best" ? "selected" : "" %> value="🙁 - Not the best">🙁 - Not the best</option>
+      <option <%= log.dayRating === "🙂 - Good" ? "selected" : "" %> value="🙂 - Good">🙂 - Good</option>
+      <option <%= log.dayRating === "😃 - Great!" ? "selected" : "" %> value="😃 - Great!">😃 - Great!</option>
+      <option <%= log.dayRating === "😁 - Fantastic!" ? "selected" : "" %> value="😁 - Fantastic!">😁 - Fantastic!</option>
+  </select>
+
+  <label>What was the highlight of your day?</label>
+  <input type="text" name="favActivity" maxlength="50" value="<%= log.favActivity %>" />
+
+  <label>What'd you do today?</label>
+  <textarea name="comment" rows="5" cols="50" placeholder="'I had 6 mojitos and passed out on a lounge chair. Wore sweatpants to dinner because my pants no longer fit. Had a massage at the spa.'">
+    <%= log.comment %>
+  </textarea>
+
+  <div id="button-holder">
+    <input type="submit" value="Update Log">    
+</div>
+</form>
+
+<%- include('../partials/footer') %>

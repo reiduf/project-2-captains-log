@@ -1,6 +1,5 @@
 <%- include('../partials/header-pre-link') %>
 <link rel="stylesheet" href="/stylesheets/cruises/cruise-deets.css" />
-<link rel="stylesheet" href="/stylesheets/logs/cruise-deets.css" />
 <%- include('../partials/header-post-link') %>
 
 <h1 class="fadein">Cruise Details</h1>
@@ -21,8 +20,8 @@
     <div id="cruise-details-box">
       <p><span>Ship:</span> <%= cruise.cruiseBoat %></p>
       <p><span>Cruise Line:</span> <%= cruise.cruiseLine %> Cruise Line</p>
-      <p><span>Embarks:</span> <%= cruise.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
-      <p><span>Debarks:</span> <%= cruise.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+      <p><span>Embarks:</span> <%= cruise.startDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+      <p><span>Debarks:</span> <%= cruise.endDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
       <p><span>Notes:</span> <%= cruise.notes %></p>
       <p><span>Logs:</span> <%= cruise.logs.length %></p>
       <img class="tape tape2" src="https://i.imgur.com/KiS8n2G.png" alt="tape">
@@ -33,13 +32,13 @@
     <h2>Logs</h2>
     <a id="add-log" href="<%= cruise._id %>/logs/new"><div>+</div></a>
     <div id="logs-grid">
-      <% if(!cruise.logs) { %>
-        <p>Click the ➕ to add a new log!</p>
+      <% if(cruise.logs.length === 0) { %>
+        <p id="no-logs">Click the ➕ to add a new log!</p>
       <% } else { %>
         <% cruise.logs.forEach((log, idx) => { %>
           <div>
             <p class="log-title">
-                <a href="/cruises/<%= cruise._id %>/logs/<%= log._id %>">Day <%= idx + 1 %> (<%= log.entryDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"})  %>)</a>: 
+                <a href="/cruises/<%= cruise._id %>/logs/<%= log._id %>">Day <%= idx + 1 %> (<%= log.entryDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"})  %>)</a>: 
                 <%= log.currentLoc %>
             </p>
           </div>

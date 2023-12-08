@@ -1,6 +1,7 @@
 body {
   overflow: hidden;
 }
+
 main {
   display: flex;
   justify-content: center;
@@ -10,14 +11,16 @@ main {
 }
 
 #paper {
-  height: 85%;
-  width: 40%;
+  height: 99%;
+  width: 45%;
   background: #FCF5E5;
   box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48);
   border-radius: 0.25vmin 0.25vmin;
-  padding: 3vmin;
+  padding: 7vmin;
+  padding-top: 9vmin;
   position: absolute;
   bottom: -100vmin;
+  font-family: 'Special Elite', serif;
 }
 
 @keyframes slide-up {
@@ -26,6 +29,53 @@ main {
 }
 
 .slide-up {
-  animation: 0.5s slide-up;
+  animation: 1s slide-up;
   animation-fill-mode: forwards;
 }
+
+#paper p {
+  line-height: 4vmin;
+  color: rgb(55, 55, 124);
+}
+
+p:first-child {
+  color: black !important;
+  margin-bottom: 2vmin;
+}
+
+p:nth-child(5) {
+  margin-top: 4vmin;
+}
+
+p:last-child {
+  margin-top: 4vmin;
+  line-height: 0;
+}
+
+span {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: underline;
+  margin-right: 1vmin;
+}
+
+#form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vmin;
+}
+
+#form-buttons button {
+  margin: 2vmin 4vmin;
+  width: 15vmin;
+  padding: 1vmin;
+  border: none;
+  color: white;
+  font-family: inherit;
+  letter-spacing: 0.25vmin;
+  border-radius: 2vmin;
+  cursor: pointer;
+  background-color: red;
+}
+

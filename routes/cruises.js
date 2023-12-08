@@ -15,5 +15,7 @@ router.get('/:id/edit', ensureLoggedIn, cruisesCtrl.edit)
 router.get('/:id/logs/new', ensureLoggedIn, logsCtrl.new)
 router.get('/:cruiseId/logs/:logId', ensureLoggedIn, logsCtrl.show)
 router.post('/:id/logs', ensureLoggedIn, logsCtrl.create)
+router.get('/:cruiseId/logs/:logId/edit', ensureLoggedIn, logsCtrl.edit)
+router.put('/:cruiseId/logs/:logId', logsCtrl.update)
 
 module.exports = router;

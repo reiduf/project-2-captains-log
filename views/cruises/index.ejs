@@ -11,9 +11,9 @@
       <div class="cruise-desc">
         <h2><%= cruise.title %></h2>
         <p>
-          <%= cruise.startDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> 
+          <%= cruise.startDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> 
           to
-          <%= cruise.endDate.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) %>
+          <%= cruise.endDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %>
         </p>
         <p><span>Itinerary: </span> <%= cruise.itinerary %></p>
         <p><%= cruise.logs.length %> Logs</p>

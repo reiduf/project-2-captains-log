@@ -2,9 +2,24 @@
 <link rel="stylesheet" href="/stylesheets/logs/log-deets.css" />
 <%- include('../partials/header-post-link') %>
 
-<main>
+<div class="fadein center-this"><h1>Day <%= (cruise.logs.findIndex(i => i._id === log._id) + 1) %>: <%= cruise.title %></h1></div>
 
+<div class="fadein" id="form-buttons">
+  <a href="/cruises/<%= cruise._id %>/logs/<%= log._id %>/edit"><button>EDIT LOG</button></a>
+  <form action="">
+    <button>DELETE LOG</button>
+  </form>
+</div>
+
+<main>
   <section class="slide-up" id="paper">
+    <p><%= log.entryDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> %></p>
+    <p><span>Location:</span> <%= log.currentLoc %></p>
+    <p><span>Sea Conditions:</span> <%= log.seaConditions %></p>
+    <p><span>Weather:</span> <%= log.weather %></p>
+    <p><span>I'm feeling:</span> <%= log.dayRating %></p>
+    <p><span>Highlight of the Day:</span> <%= log.favActivity %></p>
+    <p><span>Comments/Notes:</span><br><%= log.comment %></p>
 
   </section>
 </main>

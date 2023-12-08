@@ -68,6 +68,12 @@ h2 {
   line-height: 2.25vmin;
 }
 
+#no-logs {
+  position: absolute;
+  left: 37%;
+  bottom: 49%;
+}
+
 p {
   max-width: 43vmin;
   margin: 0;

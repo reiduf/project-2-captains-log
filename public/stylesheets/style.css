@@ -19,7 +19,7 @@ h1 {
 }
 
 .fadein {
-  animation: fadein 2s;
+  animation: fadein 1s;
 }
 
 .grow:hover {

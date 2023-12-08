@@ -24,10 +24,10 @@
     <input type="text" name="cruiseBoat" value="<%= cruise.cruiseBoat %>">
 
     <label>Embarkation Date:</label>
-    <input type="date" name="startDate" value="<%= `${cruise.startDate.getFullYear()}-${String(cruise.startDate.getMonth()).padStart(2, '0')}-${String(cruise.startDate.getDay()).padStart(2, '0')}` %>">
+    <input type="date" name="startDate" value="<%= `${cruise.startDate.toISOString().split('T')[0]}` %>">
 
     <label>Disembarkation Date:</label>
-    <input type="date" name="endDate" value="<%= `${cruise.endDate.getFullYear()}-${String(cruise.endDate.getMonth()).padStart(2, '0')}-${String(cruise.endDate.getDay()).padStart(2, '0')}` %>">
+    <input type="date" name="endDate" value="<%= `${cruise.endDate.toISOString().split('T')[0]}` %>">
 
     <label>Itinerary:</label>
     <input type="text" name="itinerary" maxlength="50" value="<%= cruise.itinerary %>">
@@ -36,7 +36,6 @@
     <textarea name="notes" rows="4" cols="50"><%= cruise.notes %></textarea>
 
     <div id="button-holder">
-        <input type="reset" value="Clear Form">
         <input type="submit" value="Update Cruise">
     </div>
 </form>

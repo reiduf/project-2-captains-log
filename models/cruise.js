@@ -18,7 +18,7 @@ const logSchema = new Schema({
   seaConditions: {
     type: String,
     enum: [
-      "Smooth sailing",
+      "Smooth sailing!",
       "A little movement, can't complain",
       "Pretty standard day on the ocean",
       "Choppy, I need to put on my sea legs",
