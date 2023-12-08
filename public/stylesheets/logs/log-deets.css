@@ -84,3 +84,35 @@ div.fadein a:nth-child(2) > button {
   width: 23vmin !important;
 }
 
+
+@media (max-width: 1025px) {
+  #paper {
+    width: 80%;
+  }
+  h1 {
+    font-size: 5.2vmin;
+  }
+  #paper p {
+    font-size: 3vmin;
+    line-height: 5.5vmin;
+  }
+}
+
+@media (max-width: 768px) {
+  #paper {
+    width: 80%;
+  }
+  main {
+    height: 80vh;
+  }
+  h1 {
+    font-size: 5vmin;
+  }
+  #paper p {
+    line-height: 5.5vmin;
+    font-size: 4vmin;
+  }
+  body {
+    overflow: scroll;
+  }
+}

@@ -74,7 +74,7 @@ header>nav>a {
   border-radius: 4vmin;
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1200px) {
   hr {
     display: block;
     width: 90vw;
@@ -98,10 +98,11 @@ header>nav>a {
   }
 
   #logo {
-    width: auto;
+    width: 80vw;
   }
 
   #logout {
     font-size: 4vmin;
   }
 }
+
