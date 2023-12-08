@@ -33,7 +33,7 @@
     <input type="text" name="itinerary" maxlength="50" value="<%= cruise.itinerary %>" required>
 
     <label>Notes About This Cruise:</label>
-    <textarea name="notes" rows="4" cols="50" required><%= cruise.notes %></textarea>
+    <textarea name="notes" rows="4" cols="50" maxlength="275"><%= cruise.notes %></textarea>
 
     <div id="button-holder">
         <input type="submit" value="Update Cruise">

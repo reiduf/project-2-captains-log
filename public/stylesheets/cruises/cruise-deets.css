@@ -133,7 +133,9 @@ section h2 {
   border-radius: 0.75vmin 0 0 0;
   font-family: 'Special Elite', serif;
   padding-top: 3.1vmin;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #add-log {
@@ -148,8 +150,8 @@ section h2 {
   color: white;
   font-size: 3vmin;
   border-radius: 50%;
-  width: 4vmin;
   height: 4vmin;
+  width: 4vmin;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,7 +161,8 @@ section h2 {
   display: flex;
   align-items: center;
   margin-bottom: 1vmin;
-  margin-left: 3vmin;
+  justify-content: center;
+  text-align: center;
 }
 
 .log-title {

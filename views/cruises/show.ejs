@@ -39,12 +39,11 @@
           <div>
             <p class="log-title">
                 <a href="/cruises/<%= cruise._id %>/logs/<%= log._id %>">Day <%= idx + 1 %> (<%= log.entryDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"})  %>)</a>: 
-                <%= log.currentLoc %>
+                <br><%= log.currentLoc %>
             </p>
           </div>
         <% }) %>
       <% } %>
-
     </div>
   </section>
 
