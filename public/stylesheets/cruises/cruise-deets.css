@@ -226,6 +226,14 @@ section h2 {
   }
 }
 
+@media (max-width: 768px) {
+  section h2 {
+    left: 45%;
+    top: 0.5vmin;
+    font-size: 3vmin;
+    color: white;
+  }
+}
 
 
 
