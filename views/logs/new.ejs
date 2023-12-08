@@ -7,10 +7,10 @@
   <div id="center-the-div"><h1>Add Log To:<br /><%= cruise.title %> </h1></div>
   
   <label>Log Date:</label>
-  <input type="date" name="entryDate">
+  <input type="date" name="entryDate" required>
 
   <label>What port were you at today (or at sea)?</label>
-  <input type="text" name="currentLoc" maxlength="50" placeholder="'Puerto Vallarta'" />
+  <input type="text" name="currentLoc" maxlength="50" placeholder="'Puerto Vallarta'" required />
 
   
   <label>How were the sea conditions today?</label>
@@ -42,10 +42,10 @@
   </select>
 
   <label>What was the highlight of your day?</label>
-  <input type="text" name="favActivity" maxlength="50" placeholder="'Snorkeling at the coral reef!'" />
+  <input type="text" name="favActivity" maxlength="50" placeholder="'Snorkeling at the coral reef!'" required />
 
   <label>What'd you do today?</label>
-  <textarea name="comment" rows="5" cols="50" placeholder="'I had 6 mojitos and passed out on a lounge chair. Wore sweatpants to dinner because my pants no longer fit. Had a massage at the spa.'"></textarea>
+  <textarea name="comment" rows="5" cols="50" placeholder="'I had 6 mojitos and passed out on a lounge chair. Wore sweatpants to dinner because my pants no longer fit. Had a massage at the spa.'" required></textarea>
 
   <div id="button-holder">
     <input type="reset" value="Clear Form">

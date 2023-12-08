@@ -2,7 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const logSchema = new Schema({
-  entryDate: Date,
+  entryDate: {
+    type: Date,
+    required: true
+  },
   dayRating: {
     type: String,
     enum: [
@@ -11,10 +14,17 @@ const logSchema = new Schema({
       "🙂 - Good",   
       "😃 - Great!",
       "😁 - Fantastic!"
-    ]
+    ],
+    required: true
   },
-  favActivity: String,
-  comment: String,
+  favActivity: {
+    type: String,
+    required: true
+  },
+  comment: {
+    type: String,
+    required: true
+  },
   seaConditions: {
     type: String,
     enum: [
@@ -23,7 +33,8 @@ const logSchema = new Schema({
       "Pretty standard day on the ocean",
       "Choppy, I need to put on my sea legs",
       "Insane, get me off this ship!"
-    ]
+    ],
+    required: true
   },
   weather: {
     type: String,
@@ -34,9 +45,13 @@ const logSchema = new Schema({
       "🌧️ - Rainy",
       "⛈️ - Stormy",
       "🌪️ - Hurricane"
-    ]
+    ],
+    required: true
   },
-  currentLoc: String
+  currentLoc: {
+    type: String,
+    required: true
+  }
 }, {
   timestamps: true
 });
@@ -57,16 +72,33 @@ const cruiseSchema = new Schema({
     type: String,
     default: 'Disney',
     enum: ['Disney', 'Princess', 'Royal Caribbean', 'Carnival', 'Celebrity'],
+    required: true,
   },
-  cruiseBoat: String,
-  startDate: Date,
-  endDate: Date,
-  itinerary: String,
+  cruiseBoat: {
+    type: String,
+    required: true
+  },
+  startDate: {
+    type: Date,
+    required: true
+  },
+  endDate: {
+    type: Date,
+    required: true
+  },
+  itinerary: {
+    type: String,
+    required: true
+  },
   logs: {
     type: [logSchema],
-    default: []
+    default: [],
+    required: true,
   },
-  notes: String,
+  notes: {
+    type: String,
+    required: true
+  },
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',

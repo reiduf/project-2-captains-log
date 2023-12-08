@@ -16,8 +16,8 @@ main {
   background: #FCF5E5;
   box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48);
   border-radius: 0.25vmin 0.25vmin;
-  padding: 7vmin;
-  padding-top: 9vmin;
+  padding: 5vmin;
+  padding-top: 6vmin;
   position: absolute;
   bottom: -100vmin;
   font-family: 'Special Elite', serif;
@@ -77,5 +77,10 @@ span {
   border-radius: 2vmin;
   cursor: pointer;
   background-color: red;
+}
+
+div.fadein a:nth-child(2) > button {
+  background-color: black !important;
+  width: 23vmin !important;
 }
 

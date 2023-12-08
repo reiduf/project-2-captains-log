@@ -3,24 +3,33 @@
 <%- include('../partials/header-post-link') %>
 
 <div class="fadein" id="center-this"><h1>My Cruises (<%= userCruises.length %>)</h1></div>
-<main class="fadein" id="my-cruises">
-  <% userCruises.forEach(function(cruise, idx) { %>
-  <a href="/cruises/<%= cruise._id %>">
-      <article class="grow">
-      <div class="thumbnail-img"></div>
-      <div class="cruise-desc">
-        <h2><%= cruise.title %></h2>
-        <p>
-          <%= cruise.startDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> 
-          to
-          <%= cruise.endDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %>
-        </p>
-        <p><span>Itinerary: </span> <%= cruise.itinerary %></p>
-        <p><%= cruise.logs.length %> Logs</p>
-      </div>
-    </article>
-  </a>
-  <% }); %>
-</main>
+
+<% if(userCruises.length === 0) { %>
+  <div class="center-this">
+    <p>No cruises found :( time to book a vacation!</p>
+    <a href="/cruises/new" id="body-add-cruise">Add Cruise</a>
+  </div>
+<% } else { %>
+  <main class="fadein" id="my-cruises">
+    <% userCruises.forEach(function(cruise, idx) { %>
+    <a href="/cruises/<%= cruise._id %>">
+        <article class="grow">
+        <div class="thumbnail-img"></div>
+        <div class="cruise-desc">
+          <h2><%= cruise.title %></h2>
+          <p>
+            <%= cruise.startDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %> 
+            to
+            <%= cruise.endDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %>
+          </p>
+          <p><span>Itinerary: </span> <%= cruise.itinerary %></p>
+          <p><%= cruise.logs.length %> Logs</p>
+        </div>
+      </article>
+    </a>
+    <% }); %>
+  </main>
+<% }; %>
+
 
 <%- include('../partials/footer') %>

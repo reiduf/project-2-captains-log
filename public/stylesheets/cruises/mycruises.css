@@ -8,6 +8,28 @@ a {
   text-decoration: none;
 }
 
+div.center-this {
+  margin-top: 15vmin;
+}
+
+div.center-this p {
+  margin-bottom: 7vmin;
+  font-size: 5vmin;
+  font-weight: 100;
+}
+
+#body-add-cruise {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  letter-spacing: 0.25vmin;
+  text-transform: uppercase;
+  padding: 1vmin 2vmin;
+  border-radius: 3vmin;
+  border: 2px solid black;
+  font-weight: 400;
+}
+
 #my-cruises {
   /* height: 80vh; */
   width: 80vw;

@@ -20,6 +20,7 @@ aside {
   border-radius: 1vmin;
   position: relative;
   box-shadow: 0.6px 1.3px 1.3px hsl(0deg 0% 0% / 0.48);
+  min-width: 45vmin;
 }
 
 #edit-delete-icons {

@@ -19,7 +19,7 @@
     <p id="desc"><%= cruise.numDays %>-day voyage to <%= cruise.itinerary %></p>
     <div id="cruise-details-box">
       <p><span>Ship:</span> <%= cruise.cruiseBoat %></p>
-      <p><span>Cruise Line:</span> <%= cruise.cruiseLine %> Cruise Line</p>
+      <p><span>Cruise Line:</span> <%= cruise.cruiseLine %></p>
       <p><span>Embarks:</span> <%= cruise.startDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
       <p><span>Debarks:</span> <%= cruise.endDate.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
       <p><span>Notes:</span> <%= cruise.notes %></p>

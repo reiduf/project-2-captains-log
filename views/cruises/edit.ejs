@@ -6,10 +6,10 @@
 <form class="fadein" id="new-cruise-form" action="/cruises/<%= cruise._id %>/?_method=PUT" method="POST">
     <h1>Edit: <%= cruise.title %></h1>
     <label>Cruise Title:</label>
-    <input type="text" name="title" maxlength="30" value="<%= cruise.title %>" />
+    <input type="text" name="title" maxlength="30" value="<%= cruise.title %>" required />
 
     <label>Number of Days:</label>
-    <input type="number" name="numDays" value="<%= cruise.numDays %>">
+    <input type="number" name="numDays" max="21" value="<%= cruise.numDays %>" required>
 
     <label>Cruise Line:</label>
     <select name="cruiseLine">
@@ -21,19 +21,19 @@
     </select>
     
     <label>Cruise Boat:</label>
-    <input type="text" name="cruiseBoat" value="<%= cruise.cruiseBoat %>">
+    <input type="text" name="cruiseBoat" value="<%= cruise.cruiseBoat %>" required>
 
     <label>Embarkation Date:</label>
-    <input type="date" name="startDate" value="<%= `${cruise.startDate.toISOString().split('T')[0]}` %>">
+    <input type="date" name="startDate" value="<%= `${cruise.startDate.toISOString().split('T')[0]}` %>" required>
 
     <label>Disembarkation Date:</label>
-    <input type="date" name="endDate" value="<%= `${cruise.endDate.toISOString().split('T')[0]}` %>">
+    <input type="date" name="endDate" value="<%= `${cruise.endDate.toISOString().split('T')[0]}` %>" required>
 
     <label>Itinerary:</label>
-    <input type="text" name="itinerary" maxlength="50" value="<%= cruise.itinerary %>">
+    <input type="text" name="itinerary" maxlength="50" value="<%= cruise.itinerary %>" required>
 
     <label>Notes About This Cruise:</label>
-    <textarea name="notes" rows="4" cols="50"><%= cruise.notes %></textarea>
+    <textarea name="notes" rows="4" cols="50" required><%= cruise.notes %></textarea>
 
     <div id="button-holder">
         <input type="submit" value="Update Cruise">
