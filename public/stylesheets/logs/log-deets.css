@@ -100,16 +100,16 @@ div.fadein a:nth-child(2) > button {
 
 @media (max-width: 768px) {
   #paper {
-    width: 80%;
+    width: 90%;
   }
   main {
-    height: 80vh;
+    height: 77vh;
   }
   h1 {
     font-size: 5vmin;
   }
   #paper p {
-    line-height: 5.5vmin;
+    line-height: 5.8vmin;
     font-size: 4vmin;
   }
   body {
