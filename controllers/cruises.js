@@ -15,7 +15,7 @@ function newCruise(req, res) {
 }
 
 async function index(req, res) {
-  const userCruises = await Cruise.find({ user: req.user._id });
+  const userCruises = await Cruise.find({ user: req.user._id }).sort('startDate');
   res.render('cruises/index', { 
     title: 'My Cruises',
     userCruises 
