@@ -4,15 +4,30 @@
 
 <main class="welcome fadein" id="user-home">
   <h1>Welcome, <%= user.firstName %>!</h1>
-  <h2><span>Cruiser Full Name: </span><%= user.name %></h2>
 
-  <p><span>Total Cruises: </span><%= userCruises.length %></p>
+  <div id="passport-top">
+    <section>
+      <p class="passport-label">Cruiser Full Name</p>
+      <p><%= user.name %></p>
+      <p class="passport-label">Captain's Log Member Since</p> 
+      <p><%= user.createdAt.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+      <p class="passport-label">Captain's Log Member Status</p>
+      <p><%= memberStatus %></p>
+    </section>
+  </div>
 
-  <p><span>Total Days Sailed: </span></p>
+  <div>
+    <p class="passport-label">Total Cruises
+    <p><%= userCruises.length %></p>
 
-  <p><span>Locations Traveled: </span></p>
-  
-  <p><span>Cruise Lines: </span></p>
+    <p class="passport-label">Cruise Lines</p>
+
+    <p class="passport-label">Cruise Ships</p>
+
+    <p class="passport-label">Total Days Sailed</p>
+
+    <p class="passport-label">Locations Traveled</p>
+  </div>
 </main>
 
 <%- include('./partials/footer') %>
