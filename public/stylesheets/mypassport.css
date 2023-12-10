@@ -8,7 +8,7 @@ h1 {
 
 div p {
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 1.7vmin;
   letter-spacing: 0.25vmin;
   color: white;
@@ -43,7 +43,7 @@ section p:last-child {
 section, footer {
   width: 100%;
   padding: 3vmin 2vmin;
-  min-height: 6vmin;
+  min-height: 8vmin;
 }
 
 section, footer {

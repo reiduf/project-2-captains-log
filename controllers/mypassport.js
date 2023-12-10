@@ -8,12 +8,14 @@ async function index(req, res) {
   const userCruises = await Cruise.find({ user: req.user._id });
   let memberStatus = await getMemberStatus(req);
   const cruiseTallyString = buildCruiseTallyString(userCruises);
+  const cruiseBoatTally = buildCruiseBoatTally(userCruises);
 
-
-  res.render('mypassport', { userCruises, memberStatus, cruiseTallyString, title: "My Passport" })
-  
-
-
+  res.render('mypassport', { 
+    userCruises, 
+    memberStatus, 
+    cruiseTallyString, 
+    cruiseBoatTally, 
+    title: "My Passport" })
 }
 
 async function getMemberStatus(req,res) {
@@ -45,6 +47,23 @@ function buildCruiseTallyString(userCruises) {
     tallyArray.push(`${property} (x${cruiseTallyTotals[property]})`);
   }
   
-  const tallyString = tallyArray.join(', ');
+  const tallyArraySorted = tallyArray.sort();
+  const tallyString = tallyArraySorted.join(', ');
   return tallyString;
+}
+
+function buildCruiseBoatTally(userCruises) {
+  const cruiseTallyTotals = userCruises.reduce((acc, cruise) => {
+      acc[cruise.cruiseBoat] = acc[cruise.cruiseBoat] ? acc[cruise.cruiseBoat] + 1 : 1;
+      return acc;
+    }, {})
+
+  const tallyArray = [];
+
+  for (const property in cruiseTallyTotals) {
+    tallyArray.push(`${property} (x${cruiseTallyTotals[property]})`);
+  }
+
+  const tallyArraySorted = tallyArray.sort();
+  return tallyArraySorted;
 }

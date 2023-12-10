@@ -28,10 +28,16 @@
           <p>No cruises sailed yet</p>
         <% } else { %>
           <p><%= cruiseTallyString %></p>
-        <% } %>
+        <% }; %>
 
         <p class="passport-label">Cruise Ships</p>
-        <p>Disney Magic, Disney Wonder, Disney Dream, Disney Fantasy, Princess Regal, Princess Crown</p>
+        <% if (cruiseBoatTally.length === 0) { %>
+          <p>No cruises sailed yet</p>
+        <% } else { %>
+          <% cruiseBoatTally.forEach(boat => { %>
+            <p><%= boat %></p>
+          <% }) %>
+        <% } %>
 
         <p class="passport-label">Total Days Sailed</p>
         <p>142 days</p>
