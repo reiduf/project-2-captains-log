@@ -83,6 +83,13 @@ footer p {
   #passport p {
     font-size: 3vmin;
   }
+  section {
+    background:linear-gradient(to bottom, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #282865);
+  }
+
+  footer {
+    background: linear-gradient(to top, #ffffff, #f8f8f8, #f8f8f8, #f8f8f8, #f8f8f8, #f8f8f8, #d4d2d2);
+  }
 }
 
 @media (max-width: 1025px) {
