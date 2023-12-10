@@ -5,8 +5,10 @@
 <main class="welcome fadein" id="user-home">
   <h1>Welcome, <%= user.firstName %>!</h1>
 
-  <div id="passport-top">
+  <div id="passport">
+    
     <section>
+      <img src="<%= user.avatar %>" alt="">
       <p class="passport-label">Cruiser Full Name</p>
       <p><%= user.name %></p>
       <p class="passport-label">Captain's Log Member Since</p> 
@@ -14,19 +16,20 @@
       <p class="passport-label">Captain's Log Member Status</p>
       <p><%= memberStatus %></p>
     </section>
-  </div>
 
-  <div>
-    <p class="passport-label">Total Cruises
-    <p><%= userCruises.length %></p>
+    <footer>
+        <p class="passport-label">Total Cruises
+        <p><%= userCruises.length %></p>
 
-    <p class="passport-label">Cruise Lines</p>
+        <p class="passport-label">Cruise Lines</p>
 
-    <p class="passport-label">Cruise Ships</p>
+        <p class="passport-label">Cruise Ships</p>
 
-    <p class="passport-label">Total Days Sailed</p>
+        <p class="passport-label">Total Days Sailed</p>
 
-    <p class="passport-label">Locations Traveled</p>
+        <p class="passport-label">Locations Traveled</p>
+    </footer>
+    
   </div>
 </main>
 
