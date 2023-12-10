@@ -9,12 +9,16 @@ async function index(req, res) {
   let memberStatus = await getMemberStatus(req);
   const cruiseTallyString = buildCruiseTallyString(userCruises);
   const cruiseBoatTally = buildCruiseBoatTally(userCruises);
+  const dayTally = getDayTally(userCruises);
+  const cruiseItineraryTally = buildItineraryTallyArray(userCruises);
 
   res.render('mypassport', { 
     userCruises, 
     memberStatus, 
     cruiseTallyString, 
-    cruiseBoatTally, 
+    cruiseBoatTally,
+    dayTally,
+    cruiseItineraryTally,
     title: "My Passport" })
 }
 
@@ -64,6 +68,32 @@ function buildCruiseBoatTally(userCruises) {
     tallyArray.push(`${property} (x${cruiseTallyTotals[property]})`);
   }
 
+  const tallyArraySorted = tallyArray.sort();
+  return tallyArraySorted;
+}
+
+function getDayTally(userCruises) {
+  let dayTally = 0;
+
+  userCruises.forEach(cruise => {
+    dayTally = dayTally + cruise.numDays;
+  });
+
+  return dayTally;
+}
+
+function buildItineraryTallyArray(userCruises) {
+  const cruiseTallyTotals = userCruises.reduce((acc, cruise) => {
+      acc[cruise.itinerary] = acc[cruise.itinerary] ? acc[cruise.itinerary] + 1 : 1;
+      return acc;
+    }, {})
+
+  const tallyArray = [];
+
+  for (const property in cruiseTallyTotals) {
+    tallyArray.push(`${property} (x${cruiseTallyTotals[property]})`);
+  }
+  
   const tallyArraySorted = tallyArray.sort();
   return tallyArraySorted;
 }

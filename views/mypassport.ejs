@@ -40,10 +40,16 @@
         <% } %>
 
         <p class="passport-label">Total Days Sailed</p>
-        <p>142 days</p>
+        <p><%= dayTally %> days</p>
 
         <p class="passport-label">Locations Traveled</p>
-        <p>Western Caribbean, Eastern Caribbean, Alaska, Mediterranean</p>
+        <% if (cruiseItineraryTally.length === 0) { %>
+          <p>No cruises sailed yet</p>
+        <% } else { %>
+          <% cruiseItineraryTally.forEach(i => { %>
+            <p><%= i %></p>
+          <% }) %>
+        <% } %>
     </footer>
     
   </div>
