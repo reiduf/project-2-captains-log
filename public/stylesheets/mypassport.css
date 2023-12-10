@@ -3,7 +3,7 @@ main {
 }
 
 h1 {
-  font-size: 5vmin;
+  font-size: 4vmin;
 }
 
 div p {
@@ -19,6 +19,7 @@ div p {
   text-transform: capitalize;
   letter-spacing: normal;
   margin-top: 2vmin;
+  display: inline-block;
 }
 
 main, section, footer {
@@ -32,6 +33,7 @@ main, section, footer {
   width: 35%;
   display: flex;
   flex-direction: row;
+  margin-top: 3vmin;
 }
 
 section p:last-child {
@@ -41,13 +43,14 @@ section p:last-child {
 section, footer {
   width: 100%;
   padding: 3vmin 2vmin;
+  min-height: 6vmin;
 }
 
 section, footer {
   padding: 2vmin;
   border-radius: 1vmin;
   text-align: center;
-  background:linear-gradient(to right, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #19193e);
+  background:linear-gradient(to right, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #282865);
   box-shadow: 2.6px 5.3px 5.3px hsl(0deg 0% 0% / 0.42);
 }
 
@@ -60,11 +63,11 @@ section, footer {
 footer {
   background: linear-gradient(to left, #ffffff, #f8f8f8, #f8f8f8, #f8f8f8, #f8f8f8, #f8f8f8, #d4d2d2);
   text-align: center;
+  display: block;
 }
 
 footer p {
   color: black;
-  display: flex;
 }
 
 
