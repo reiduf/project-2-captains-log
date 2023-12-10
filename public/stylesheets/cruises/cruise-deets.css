@@ -137,6 +137,7 @@ section h2 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  min-height: 30vmin;
 }
 
 #add-log {
@@ -223,6 +224,11 @@ section h2 {
     line-height: 5vmin;
     margin-bottom: 3vmin;
     border-top: 4vmin;
+  }
+
+  #no-logs {
+    left: 24%;
+    bottom: 15%;
   }
 }
 
