@@ -74,16 +74,23 @@ footer p {
   color: black;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1300px) {
   #passport {
     flex-direction: column;
-    width: 80%;
+    width: 50%;
     margin-bottom: 2vmin;
   }
   #passport p {
     font-size: 3vmin;
   }
 }
+
+@media (max-width: 1025px) {
+  #passport {
+    width: 80%;
+  }
+}
+
 
 
 
