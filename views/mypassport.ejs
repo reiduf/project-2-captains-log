@@ -15,19 +15,19 @@
       <p><%= user.createdAt.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
       <p class="passport-label">Captain's Log Member Status</p>
       <p><%= memberStatus %></p>
+      <p class="passport-label">Total Cruises
+      <p><%= userCruises.length %></p>
     </section>
 
-    <footer>
-        <p class="passport-label">Total Cruises
-        <p><%= userCruises.length %></p>
-
+    <footer>       
         <p class="passport-label">Cruise Lines</p>
-
+        <p>Disney Cruise Line, Princess</p>
         <p class="passport-label">Cruise Ships</p>
-
+        <p>Disney Magic, Disney Wonder, Disney Dream, Disney Fantasy, Princess Regal, Princess Crown</p>
         <p class="passport-label">Total Days Sailed</p>
-
+        <p>142 days</p>
         <p class="passport-label">Locations Traveled</p>
+        <p>Western Caribbean, Eastern Caribbean, Alaska, Mediterranean</p>
     </footer>
     
   </div>
