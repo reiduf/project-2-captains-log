@@ -11,21 +11,31 @@
       <img src="<%= user.avatar %>" alt="">
       <p class="passport-label">Cruiser Full Name</p>
       <p><%= user.name %></p>
+
       <p class="passport-label">Captain's Log Member Since</p> 
       <p><%= user.createdAt.toLocaleDateString('en-us', { timeZone: "UTC", weekday:"short", year:"numeric", month:"short", day:"numeric"}) %></p>
+
       <p class="passport-label">Captain's Log Member Status</p>
       <p><%= memberStatus %></p>
+
       <p class="passport-label">Total Cruises
       <p><%= userCruises.length %></p>
     </section>
 
     <footer>       
         <p class="passport-label">Cruise Lines</p>
-        <p>Disney Cruise Line, Princess</p>
+        <% if (!cruiseTallyString) { %>
+          <p>No cruises sailed yet</p>
+        <% } else { %>
+          <p><%= cruiseTallyString %></p>
+        <% } %>
+
         <p class="passport-label">Cruise Ships</p>
         <p>Disney Magic, Disney Wonder, Disney Dream, Disney Fantasy, Princess Regal, Princess Crown</p>
+
         <p class="passport-label">Total Days Sailed</p>
         <p>142 days</p>
+
         <p class="passport-label">Locations Traveled</p>
         <p>Western Caribbean, Eastern Caribbean, Alaska, Mediterranean</p>
     </footer>
