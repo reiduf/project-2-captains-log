@@ -44,14 +44,15 @@ section, footer {
   width: 100%;
   padding: 3vmin 2vmin;
   min-height: 8vmin;
-}
-
-section, footer {
   padding: 2vmin;
-  border-radius: 1vmin;
+  border-radius: 1vmin 0.5vmin 0.5vmin 1vmin;
   text-align: center;
   background:linear-gradient(to right, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #3a3a91, #282865);
   box-shadow: 2.6px 5.3px 5.3px hsl(0deg 0% 0% / 0.42);
+}
+
+footer {
+  border-radius: 0.5vmin 1vmin 1vmin 0.5vmin;
 }
 
 footer p:first-child {
