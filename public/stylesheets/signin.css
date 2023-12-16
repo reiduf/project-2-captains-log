@@ -71,7 +71,7 @@ main, #signup-box {
 }
 
 .slide-in {
-  animation: slide 250s infinite;
+  animation: slide 250s linear infinite;
 }
 
 .seasick {
