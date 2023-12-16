@@ -27,7 +27,7 @@ Enter Captain's Log—a sophisticated platform designed for users to meticulousl
 
 ![App Screenshot](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG5kd3MxN2YwZTdtNDBzc215Nm14cHp0Mmo2anZxZmUwNmh4ZWhpaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/21UbIzdRV734x1NnaF/giphy.gif)
 
-Please click [here](https://www.captains-log.dufrene.dev/) to try out Captain's Log!
+Please click [here](https://caplog.dufrene.dev) to try out Captain's Log!
 
 Note: This application requires a Google account to use. 
 ## Next Steps
